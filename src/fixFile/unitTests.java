@@ -14,8 +14,8 @@ public class unitTests {
         assertEquals("Size of the list should be 1", 1, test.size());
     }
 
-    // we are expecting that we get an exception
-    // after refactoring the test should fail because we now can get element at index 0 (might be null though)
+    // We are expecting that we get an exception.
+    // After refactoring the test should fail because we now can get element at index 0 (might be null though)
     @Test (expected = IndexOutOfBoundsException.class)
     public void getTest(){
         System.out.println("Testing the get() method on an empty list.");
@@ -33,8 +33,8 @@ public class unitTests {
     }
 
     // should succeed before refactor. The current code cannot add to the list if the index is higher than nextFree
-    // even though there's a free slot at index 3. We expect an exception
-    // should fail after refactor when this logical mistake is fixed
+    // even though there's a free slot at index 3. We expect an exception.
+    // Should fail after refactor when this logical mistake is fixed
     @Test (expected = IndexOutOfBoundsException.class)
     public void addAtIndexTest(){
         System.out.println("Testing the add(int index) method.");
